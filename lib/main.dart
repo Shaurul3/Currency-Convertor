@@ -68,20 +68,18 @@ class _HomePageState extends State<HomePage> {
           TextButton(
             onPressed: (){
               setState(() {
-                // Parse the text to an integer
+
                 double? amount = double.tryParse(text);
 
-                // Check if the parsing was successful
-                if (amount != null) {
-                  // Multiply the parsed amount by 4.97
-                  convertedResult = amount * 4.97;
 
+                if (amount != null) {
+                  convertedResult = amount * 4.97;
                 }
               });
             },
             child: const Text('Convert!')
           ),
-          if (convertedResult != null) // Show result only if it's available
+          if (convertedResult != null)
             Text(
               '$convertedResult RON',
               style: TextStyle(fontSize: 20),
